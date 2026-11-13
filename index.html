@@ -103,7 +103,6 @@ stick.addEventListener('pointermove',e=>{if(e.pointerId===stickId)setStick(e);})
 function releaseStick(e){if(e.pointerId===stickId){stickId=null;joy={x:0,y:0};nub.style.transform='translate(0,0)';}}
 stick.addEventListener('pointerup',releaseStick);stick.addEventListener('pointercancel',releaseStick);
 document.querySelector('#jump').addEventListener('pointerdown',e=>{e.preventDefault();jumpQueued=true;});
-document.querySelector('#restart').addEventListener('click',()=>location.reload());
 
 const clock=new THREE.Clock();
 function animate(){
